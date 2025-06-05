@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,9 +15,63 @@
         android:theme="@style/Theme.Labs"
         tools:targetApi="31">
         <activity
+            android:name=".playground.jetpack.compose.sideeffects.SideEffectsSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playground.jetpack.compose.JetpackComposePlaygroundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.DerivedStateActivity"
+            android:label="@string/derived_state" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.WhatAreSideEffectsActivity"
+            android:label="@string/what_are_side_effects" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.LaunchedEffectActivity"
+            android:label="@string/launched_effect" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.RememberCoroutineScopeActivity"
+            android:label="@string/remember_coroutine_scope" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.DisposableEffectActivity"
+            android:label="@string/disposable_effect" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.SideEffectActivity"
+            android:label="@string/side_effect" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.RememberUpdatedStateActivity"
+            android:label="@string/remember_updated_state" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.ProduceStateActivity"
+            android:label="@string/produce_state" />
+        <activity
+            android:name=".playground.jetpack.compose.sideeffects.SnapshotFlowActivity"
+            android:label="@string/snapshot_flow" />
+        <activity
+            android:name=".playground.jetpack.compose.statehoisting.StateHoistingActivity"
+            android:label="@string/state_hoisting" />
+        <activity
+            android:name=".playground.jetpack.compose.statehoisting.NeedOfStateHoistingActivity"
+            android:label="@string/need_of_state_hoisting" />
+        <activity
+            android:name=".playground.jetpack.compose.intro.BasicExampleActivity"
+            android:label="@string/basic_example" />
+        <activity
+            android:name=".playground.jetpack.compose.intro.StateExampleActivity"
+            android:label="@string/state_example" />
+        <activity
+            android:name=".playground.jetpack.compose.intro.RecompositionActivity"
+            android:label="@string/recomposition_example" />
+        <activity
+            android:name=".playground.jetpack.compose.others.imperative.ImperativeActivity"
+            android:label="Imperative Example" />
+        <activity
+            android:name=".playground.jetpack.compose.others.declarative.DeclarativeActivity"
+            android:label="Declarative Example" />
+        <activity
             android:name=".traditional_app.view.TraditionalUI"
-            android:theme="@style/Theme.Labs"
             android:exported="false"
+            android:theme="@style/Theme.Labs"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"

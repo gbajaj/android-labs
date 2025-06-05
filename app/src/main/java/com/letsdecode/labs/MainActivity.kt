@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.graphics.Color
+import com.letsdecode.labs.playground.jetpack.compose.JetpackComposePlaygroundActivity
 import com.letsdecode.labs.traditional_app.view.TraditionalUI
 import com.letsdecode.labs.ui.theme.LabsTheme
 
@@ -37,7 +38,16 @@ class MainActivity : ComponentActivity() {
                             onClick = {
                                 val intent = Intent(this@MainActivity, TraditionalUI::class.java)
                                 startActivity(intent)
-                                println("Column clicked!")
+                            })
+                        FeatureFlow(
+                            "Jetpack Compose Playground",
+                            modifier = Modifier
+                                .padding(innerPadding)
+                                .fillMaxWidth(),
+                            onClick = {
+                                val intent = Intent(this@MainActivity,
+                                    JetpackComposePlaygroundActivity::class.java)
+                                startActivity(intent)
                             })
                     }
                 }
