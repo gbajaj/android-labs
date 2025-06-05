@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -36,6 +37,10 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true  // For ViewBinding
+        dataBinding {
+            enable = true  // For DataBinding
+        }
     }
 }
 
@@ -63,6 +68,10 @@ dependencies {
     implementation(libs.gson)
     // ViewModel
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    
+    // Glide
+    implementation(libs.glide)
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
